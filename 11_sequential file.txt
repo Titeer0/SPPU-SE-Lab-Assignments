@@ -1,0 +1,32 @@
+filename);
+    }
+};
+
+int main() {
+    MyFile File;
+    int Choice;
+    int R;
+    do {
+        cout<<"\n1: Add a record\n2: Display Database\n3: Delete a record\nEnter your choice: ";
+        cin>>Choice;
+
+        switch( Choice ) {
+            case 1:
+                File.addRecord();
+                break;
+                    
+            case 2:
+                File.displayRecords();
+                break;
+                    
+            case 3:
+                cout<<"Enter the record you want to delete: ";
+                cin>>R;
+                File.deleteRecord(R);
+                break;
+        }
+    }
+    while(Choice<6);
+    cout<<endl;
+    return 0;
+}
