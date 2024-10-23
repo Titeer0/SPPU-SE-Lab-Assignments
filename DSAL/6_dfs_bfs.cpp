@@ -1,151 +1,151 @@
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-template <class t>
-class stack
-{
-    int top;
-    t arr1[10];
-    public:
-    stack()
-    {
-        top=-1;
-    }
-    t get_top();
-    void push(t x);
-    t pop();
-    bool is_empty();
-};
+// template <class t>
+// class stack
+// {
+//     int top;
+//     t arr1[10];
+//     public:
+//     stack()
+//     {
+//         top=-1;
+//     }
+//     t get_top();
+//     void push(t x);
+//     t pop();
+//     bool is_empty();
+// };
 
-template <class t>
-t stack<t>::get_top()
-{
-    return arr1[top];
-}
+// template <class t>
+// t stack<t>::get_top()
+// {
+//     return arr1[top];
+// }
 
-template <class t>
-void stack<t>::push(t x)
-{
-    if(top>=9)
-    {
-        cout<<"Stack Overflow"<<endl;
-    }
-    else
-    {
-        top++;
-        arr1[top]=x;
-    }
-}
+// template <class t>
+// void stack<t>::push(t x)
+// {
+//     if(top>=9)
+//     {
+//         cout<<"Stack Overflow"<<endl;
+//     }
+//     else
+//     {
+//         top++;
+//         arr1[top]=x;
+//     }
+// }
 
-template <class t>
-t stack<t>::pop()
-{
-    t x=0;
-    if(top==-1)
-    {
-        cout<<"Stack Underflow"<<endl;
-    }
-    else
-    {
-        x=arr1[top];
-        top--;
-    }
-    return x;
-}
+// template <class t>
+// t stack<t>::pop()
+// {
+//     t x=0;
+//     if(top==-1)
+//     {
+//         cout<<"Stack Underflow"<<endl;
+//     }
+//     else
+//     {
+//         x=arr1[top];
+//         top--;
+//     }
+//     return x;
+// }
 
-template <class t>
-bool stack<t>::is_empty()
-{
-    if(top==-1)
-    {
-        return true;
-    }
-    else 
-    {
-        return false;
-    }
-}
+// template <class t>
+// bool stack<t>::is_empty()
+// {
+//     if(top==-1)
+//     {
+//         return true;
+//     }
+//     else 
+//     {
+//         return false;
+//     }
+// }
 
-template <class t>
-class queue
-{
-    t arr2[10];
-    int front;
-    int rear;
-    public:
-    queue()
-    {
-        front=-1;
-        rear=-1;
-    }
-    t get_front();
-    void enqueue(t x);
-    void dequeue();
-    bool isempty();
-};
+// template <class t>
+// class queue
+// {
+//     t arr2[10];
+//     int front;
+//     int rear;
+//     public:
+//     queue()
+//     {
+//         front=-1;
+//         rear=-1;
+//     }
+//     t get_front();
+//     void enqueue(t x);
+//     void dequeue();
+//     bool isempty();
+// };
 
-template <class t>
-t queue<t>::get_front()
-{
-    return arr2[front];
-}
+// template <class t>
+// t queue<t>::get_front()
+// {
+//     return arr2[front];
+// }
 
-template <class t>
-void queue<t>::enqueue(t x)
-{
-    if(rear>9)
-    {
-        cout<<"Queue Overflow"<<endl;
-    }
-    else
-    {
-        if(front==-1 && rear==-1)
-        {
-            front++;
-            rear++;
-            arr2[rear]=x;
-        }
-        else
-        {
-            rear++;
-            arr2[rear]=x;
-        }
-    }
-}
+// template <class t>
+// void queue<t>::enqueue(t x)
+// {
+//     if(rear>9)
+//     {
+//         cout<<"Queue Overflow"<<endl;
+//     }
+//     else
+//     {
+//         if(front==-1 && rear==-1)
+//         {
+//             front++;
+//             rear++;
+//             arr2[rear]=x;
+//         }
+//         else
+//         {
+//             rear++;
+//             arr2[rear]=x;
+//         }
+//     }
+// }
 
-template <class t>
-void queue<t>::dequeue()
-{
-    if(front==-1)
-    {
-        cout<<"Queue Underflow"<<endl;
-    }
-    else
-    {
-        if(front==rear)
-        {
-            front=-1;
-            rear=-1;
-        }
-        else
-        {
-            front++;
-        }
-    }
-}
+// template <class t>
+// void queue<t>::dequeue()
+// {
+//     if(front==-1)
+//     {
+//         cout<<"Queue Underflow"<<endl;
+//     }
+//     else
+//     {
+//         if(front==rear)
+//         {
+//             front=-1;
+//             rear=-1;
+//         }
+//         else
+//         {
+//             front++;
+//         }
+//     }
+// }
 
-template <class t>
-bool queue<t>::isempty()
-{
-    if(front==-1)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+// template <class t>
+// bool queue<t>::isempty()
+// {
+//     if(front==-1)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
 
 #include <iostream>
 #include <stack>
